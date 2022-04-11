@@ -32,7 +32,6 @@ const TodoList: React.FC<Props> = ({
                 index={index}
                 todo={item}
                 key={item.id}
-                todos={todos}
                 setTodos={setTodos}
               />
             ))}
@@ -56,7 +55,6 @@ const TodoList: React.FC<Props> = ({
                 index={index}
                 todo={item}
                 key={item.id}
-                todos={completedTodos}
                 setTodos={setCompletedTodos}
               />
             ))}

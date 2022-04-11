@@ -8,11 +8,10 @@ import "./styles.css";
 interface Props {
   index: number;
   todo: Todo;
-  todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const SingleTodo: React.FC<Props> = ({ index, todo, todos, setTodos }) => {
+const SingleTodo: React.FC<Props> = ({ index, todo, setTodos }) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
@@ -68,7 +67,7 @@ const SingleTodo: React.FC<Props> = ({ index, todo, todos, setTodos }) => {
               className="todos__single--text"
             />
           ) : todo.isDone ? (
-            <h2 className="todos__single--text">{todo.todo}</h2>
+            <s className="todos__single--text">{todo.todo}</s>
           ) : (
             <span className="todos__single--text">{todo.todo}</span>
           )}
